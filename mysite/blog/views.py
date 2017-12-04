@@ -9,9 +9,11 @@ def index(request):
 
 def post(request, slug):
     print (slug)
+    posts = Post.objects.all()
     # return HttpResponse("I'm a single post page")
     return render_to_response('post.html', {
-        'post': get_object_or_404(Post, slug=slug)
+        'post': get_object_or_404(Post, slug=slug),
+        'posts': posts
     })
 
 def about(request):

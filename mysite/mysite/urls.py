@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^about/$', blog_views.about ),
     url(r'^$', blog_views.index),
     url(r'^admin/', admin.site.urls),
+    
 ]
